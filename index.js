@@ -107,9 +107,19 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
+
+function addReview(array, name, rating, feedback){
   /*Your Code Here */
+ array.push({name, rating, feedback});
+  // const newRev = reviews[0];
+  // const newRating = lastReview.push(name["Daniela"], rating[5], feedback["Beautiful atmosphere and wonderful vegan options!"]);
+  // return lastReview;
+  return reviews;
 }
+// const lastReview = addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!');
+
+
+console.log(addReview(reviews, 'Daniela', 5, 'great eats!'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -122,9 +132,13 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(i ,number) {
+
+  const getReview = reviews[i][number];
   /*Your code here*/
+  return getReview;
 }
+console.log(getReviewByIndex(2,'feedback'));
 
 
   
@@ -141,8 +155,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(reviews) {
   /*Your code here*/
+
 } 
 
 
