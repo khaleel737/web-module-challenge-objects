@@ -15,9 +15,12 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  return {name, price, category};
 }
+ const newMenu = createMenuItem("Tacos", 21.99, "Mexican");
+
+console.log(newMenu);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,7 +31,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+const pizzaMenu = createMenuItem("pizza", 5, "lunch");
+const burgerMenu = createMenuItem("New York Burger", 17.99, "Dinner");
+console.log(pizzaMenu);
+console.log(burgerMenu);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,9 +53,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function (customer) {
+    if (customer === "teacher" || customer === "student") {
+    return this.price - (this.price * 0.25);
+  } else if (customer === "public") {
+    return this.price - (this.price * 0.10);
+  } else {
+    console.log("we are sorry, we want to rip your pockets!");
+  }
 }
-
+};
+    
+    console.log(burger.discount("student"));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -69,7 +84,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+const Julias = reviews[5].feedback;
+console.log(Julias);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -79,8 +95,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 
-
-
+const addReyna = reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
